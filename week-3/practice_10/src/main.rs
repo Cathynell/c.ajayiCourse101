@@ -5,7 +5,7 @@ fn main() {
    let difference:f32 = 95.5 - 4.3;
    print!("The difference of 95.5 and 4.3 ={}",difference );
 
-   let product:u32 = 4* 30;
+   let product = 4* 30;
    println!("The multiple of 4 and 30 = {}", product );
 
    let quotient = 56.7/32.2;
