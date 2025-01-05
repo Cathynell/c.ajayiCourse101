@@ -1,0 +1,8 @@
+Welcome to Nigerian Brewery Limited
+We have the following brands -: [LAGER, STOUT, NON-ALCOHOLIC]
+LAGER: 
+33 Export, Desperados, Goldberg, Gulder, Heineken, and Star
+STOUT: 
+Legend, Turbo king, and Williams
+NON-ALCOHOLIC: 
+Maltina, Amstel Malta, Malta Gold, and Fayrouz
