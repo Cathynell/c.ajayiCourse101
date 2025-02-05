@@ -1,6 +1,5 @@
 fn add_one(e: &mut i32) {
-    e= 1;
-    println!("{}", e );
+    *e+= 1;
 }
 
 fn main() {
