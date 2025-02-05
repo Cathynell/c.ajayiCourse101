@@ -46,24 +46,37 @@ fn dataplan() ->io::Result<()>{
 fn main() {
     print!("\n Welcome to Globacom Ltd Database\n");
     print!("Input e for Employee");
-    print!("Input a for Administrator");
-    print!("Input p for Projectmanager");
-    print!("Input c for Customer");
-    print!("Input d for Dataplan");
-    print!("Please Input your level");
+    print!("\nInput a for Administrator\n");
+    print!("\nInput p for Projectmanager\n");
+    print!("\nInput c for Customer\n");
+    print!("\nInput d for Dataplan\n");
+    print!("\nPlease Input your level\n");
 
-    let userinput = userinput.trim();
+    let mut userinput = String::new();
     io::stdin().read_line(&mut userinput).expect("Failed to read input");
+    let userinput = userinput.trim();
 
-    if userinput =="e" {
-        let r = employee();
-    } else if userinput =="a" {
-        let r = administrator();
-    }else if userinput =="p"{
-        let r = projectmanager();
-    }else if userinput =="c" {
-        let r = customer();
-    }else if userinput =="d" {
-        let r = dataplan();
+    if userinput == "e" {
+        if let Err(e) = employee() {
+            eprintln!("Error: {}", e);
+        }
+    } else if userinput == "a" {
+        if let Err(e) = administrator() {
+            eprintln!("Error: {}", e);
+        }
+    } else if userinput == "p" {
+        if let Err(e) = project() {
+            eprintln!("Error: {}", e);
+        }
+    } else if userinput == "c" {
+        if let Err(e) = customer() {
+            eprintln!("Error: {}", e);
+        }
+    } else if userinput == "d" {
+        if let Err(e) = dataplan() {
+            eprintln!("Error: {}", e);
+        }
+    } else {
+        println!("Invalid input, please try again.");
     }
 }
